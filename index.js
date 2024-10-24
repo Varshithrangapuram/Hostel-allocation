@@ -8,7 +8,7 @@ const cors = require('cors');
 const app = express();
 app.use(express.json());
 app.use(cors());
-const mongoURI = 'mongodb://localhost:27017/booking_db'; // Replace with your actual database name
+const mongoURI = process.env.MONGO_URI// Replace with your actual database name
 
 // Connect to MongoDB
 mongoose.connect(mongoURI)
